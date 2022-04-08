@@ -79,9 +79,9 @@ const getStateProvince = async(req,res) => {
   try
   {
     var provinceData = ''
-    //res.send("CoinPOS Cart");
-    //console.log(req.body);
-    //return;
+    res.send("CoinPOS Cart");
+    console.log(req.body);
+    return;
     await fetch(serviceUrl + 'GetProvince',
     { 
       method:'POST',
@@ -739,7 +739,7 @@ const getCoinPOSProductsService = async(req,res) =>
     });
   }
 }
-const getDefaultDataCompany = async(req,res) => 
+/* const getDefaultDataCompany = async(req,res) => 
 {
   try
   {
@@ -792,7 +792,7 @@ const getDefaultDataCompany = async(req,res) =>
       message: err.message,
     });
   }
-}
+} */
 const getCoinPOSProducts = async(req,res) => {
   try
   {
@@ -989,5 +989,5 @@ module.exports = {
   getOrderByUserId,
   getDashboardOrderByUserId,
   saveCustomerInfo,
-  getDefaultDataCompany
+  //getDefaultDataCompany
 };
